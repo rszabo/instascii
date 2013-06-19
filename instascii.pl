@@ -66,8 +66,7 @@ do {
     }
 
     # @todo Do not parse refresh, access_token and stuff...
-    $instascii->draw($key, $val, $result);
-
+    if ($result) { $instascii->draw($key, $val, $result); }
 
   }
 
