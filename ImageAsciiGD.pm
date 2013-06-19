@@ -97,7 +97,7 @@ sub draw {
     }
     print "\n";
   }
-  print "Dimensions: $w x $h\n";
+  print "(" . $w . "x" . $h . " px)\n";
 }
 
 # Invert an image resource
