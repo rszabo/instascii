@@ -36,7 +36,7 @@ sub getLogo {
   $r .= '[[[  [[[[[. \'[[\'[==/[[[[,    [[    ,[[ \'[[, \'[==/[[[[,[[[         [[[[[[' . "\n";
   $r .= '$$$  $$$ "Y$c$$  \'\'\'    $    $$   c$$$cc$$$c  \'\'\'    $$$$         $$$$$$' . "\n";
   $r .= '888  888    Y88 88b    dP    88,   888   888,88b    dP`88bo,__,o, 888888' . "\n";
-  $r .= 'MMM  MMM     YM  "YMmMY"     MMM   YMM   ""`  "YMmMY"   "YUMMMMMP"MMMMMM' . "\n";
+  $r .= 'MMM  MMM     YM  "YMmMY"     MMM   YMM   ""`  "YMmMY"   "YUMMMMMP"MMMMMM' . "\n\n";
   return $r;
 
 
@@ -107,7 +107,7 @@ sub drawUserDetails {
   my $inf = $instamedia->get('counts');
   print "Images: "        . ${ $inf }{'media'} . " / "
         . "Following: "   . ${ $inf }{'follows'} . " / "
-        . "Followed by: " . ${ $inf }{'followed_by'} . "\n";
+        . "Followed by: " . ${ $inf }{'followed_by'} . "\n\n";
 
   my $image = new InstaMediaImage($instamedia->get('profile_picture'));
   $image->draw();
@@ -119,7 +119,7 @@ sub drawUserDetails {
 }
 
 # Draw someones feed
-# hrmpf, it's currently rather bloated.
+# hrmpf, it's currently quite bloated.
 # @todo Rewrite.
 #
 sub drawUserFeed {
@@ -166,7 +166,6 @@ sub drawUserFeed {
         print $ld->[$i]->{'username'} . ", ";
       }
       print "\n";
-
     }
 
     # Get comments?
@@ -180,18 +179,18 @@ sub drawUserFeed {
           my $c_obj = $ld->[$i];
           my $c_user = $c_obj->{'from'}->{'username'};
           my $c_text = $c_obj->{'text'};
-          unless($c_obj->{'created_time'}) {
-            next;
-          }
+          unless($c_obj->{'created_time'}) { next; }
+
           my $c_date = $self->getReadableDate($c_obj->{'created_time'});
 
           print "$c_date [$c_user]: $c_text\n";
         }
       }
     }
-    # Break?
+
+    # Done?
     $cntr++;
-    if ($cntr == $conf->get('limit')) { last;  }
+    if ($cntr == $conf->get('limit')) { last; }
   }
 }
 
