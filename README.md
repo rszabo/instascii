@@ -37,9 +37,7 @@ More information over at https://richardkszabo.me/instascii/
 
 1.  Instagram access
   * Make sure you have an Instagram Access Token before using this software.
-
   * Register Instagram client: http://instagram.com/developer/clients/manage
-
   * Validate for API-access  : http://instagram.com/developer/authentication/
 
 2. Perl with LWP, GD/ImageMagick is optional as the image-renderer can be whatever.
