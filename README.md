@@ -1,31 +1,7 @@
 
+### Usage
 
 An Instagram Client for terminals
-https://richardkszabo.me/instascii/
-
-See LICENSE for GPL. This software is not really copyrighted:
-Credit where credit is due.
-
-Neither Richard K. Szabó nor Instascii is affiliated with Instagram
-and/or it's affiliates.
-
-
-
-### PREREQUISITES
-
-1. Instagram access
-   Make sure you have an Instagram Access Token before using this software.
-
-   Register Instagram client: http://instagram.com/developer/clients/manage
-   Validate for API-access  : http://instagram.com/developer/authentication/
-
-2. Perl with LWP, GD/ImageMagick is optional as the image-renderer
-   can be whatever.
-
-3. A write-enabled directory, defaults to /tmp/
-
-
-### USAGE
 
 Export environmental variable instagram_access_token or set
 access_token in InstasciiConfiguration.pm.
@@ -34,8 +10,7 @@ The Instagram API accepts user-ids when browsing and interacting,
 Instascii will accept username and perform a getByUsername() before
 any such call to the API.
 
-
-  $ ./instascii.pl [--help]
+    $ ./instascii.pl [--help]
 
     Navigation, user-name or hash-tag as parameter:
       --search-user=, --search-hash=,    --show-feed=,
@@ -56,14 +31,22 @@ any such call to the API.
       --access_token=...      Override built-in, recommended to keep in file though.
       ...all internal variables can be overridden with --<variable_name>=
 
+More information over at https://richardkszabo.me/instascii/
+
+### Prerequisites
+
+1.  Instagram access
+  a. Make sure you have an Instagram Access Token before using this software.
+  b. Register Instagram client: http://instagram.com/developer/clients/manage
+  c. Validate for API-access  : http://instagram.com/developer/authentication/
+2. Perl with LWP, GD/ImageMagick is optional as the image-renderer can be whatever.
+3. A write-enabled directory, defaults to /tmp/
 
 
-### CREDITS
+### Credits and license
 
-ImageAsciiGD.pm based on example code by jimt, 2006.
-  jimt's profile : http://www.perlmonks.org/?node_id=19316
-  original code  : http://www.perlmonks.org/?node_id=578595
-
-Thanks to: D. Fors., Joakim Karlsson and Textalk AB.
-
-See ./LICENSE
+* See LICENSE for GPL. This software is not really copyrighted: Credit where credit is due.
+* Neither Richard K. Szabó nor Instascii is affiliated with Instagram and/or it's affiliates.
+* ImageAsciiGD.pm based on example code by jimt, 2006. (http://www.perlmonks.org/?node_id=19316, http://www.perlmonks.org/?node_id=578595)
+* Thanks to: D. Fors., Joakim Karlsson and Textalk AB.
+* See ./LICENSE
