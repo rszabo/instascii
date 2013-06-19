@@ -1,0 +1,8 @@
+Instascii CHANGELOG:
+-------------------
+
+2013-06-19: Heading up to github I think.
+2013-06-13: Rewritten and enhanced for Perl v5.10.1 (x86_64, thread-multi)   (deps: LWP, optional: GD/ImageMagick)
+2013-06-11: Created PHP-version as proof-of-concept                          (deps: GD)
+
+Instascii by Richard K. Szabó, 2013
