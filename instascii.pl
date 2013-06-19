@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 #
 # INSTASCII by Richard K. Szabó, 2013-06 (C)
-#   https://richardkszabo.me/instagram/
+#   https://richardkszabo.me/instascii/
 #
 # See README and LICENSE that came with this file.
 #
@@ -11,7 +11,7 @@
 #
 # See http://dev.perl.org/licenses/ for more information.
 #
-# See InstasciiConfiguration for details on usage.
+# See InstasciiConfiguration or README for details on usage.
 #
 # Original version written in PHP by the same author, 2013-06-11
 #
